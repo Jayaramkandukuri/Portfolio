@@ -1,0 +1,272 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #fff;
+    background-color: #222;
+    scroll-behavior: smooth;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+header {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    position: relative;
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), 
+                url("photos/Jayaram_Photo.png") no-repeat center center/cover;
+    padding-left: 20px;
+    filter: brightness(1.2); /* Increase brightness */
+}
+
+
+header h1 {
+    font-size: 3.5em;
+    margin: 0;
+    color: #fff;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.8);
+}
+
+header h2 {
+    font-size: 1.8em;
+    margin: 10px 0;
+    color: #f39c12;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+}
+
+header .social-links {
+    margin-top: 20px;
+    display: flex;
+    justify-content: flex-start;
+    gap: 20px;
+}
+
+header .social-links a {
+    color: #fff;
+    font-size: 1.5em;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+header .social-links a:hover {
+    color: #f39c12;
+}
+
+.contact-info {
+    margin-top: 10px;
+    font-size: 0.9em;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-info p {
+    margin: 5px 0;
+}
+
+.contact-info a {
+    color: #f39c12;
+    text-decoration: none;
+}
+
+nav {
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 20px;
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 15px 0;
+    z-index: 1000;
+    width: 100%;
+    justify-content:center;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2em;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #f39c12;
+}
+
+/* Add margin to the first section to avoid being hidden behind the navbar */
+/* Reduced spacing between header and section */
+.section-container {
+    padding: 50px 10%;
+    background-color: #333;
+    margin-top: 40px; /* Adjusted to offset the fixed navbar height */
+}
+
+/* Ensure sections are not hidden behind one another */
+section {
+    margin-top: 20px;
+}
+
+.card {
+    background-color: #444;
+    padding: 30px;
+    margin-bottom: 10%; /* 5% space between cards */
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+}
+
+.card h2 {
+    text-align: center;
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+#about p {
+    text-align: justify;
+}
+
+.card p,
+.card li {
+    font-size: 1.2em;
+    line-height: 1.6;
+}
+
+.project-list, .education-list, .skills-list, .platforms-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.project-list li, .education-list li, .skills-list li, .platforms-list li {
+    margin-bottom: 20px;
+}
+
+.project-list a, .about-link {
+    color: #f39c12;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.project-list a:hover, .about-link:hover {
+    color: #fff;
+}
+
+.project-item, .education-item, .skill-item, .platforms-item {
+    padding: 20px;
+    background: #555;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.skills-list, .platforms-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.skills-list .skill-item, .platforms-list .platforms-item {
+    width: 200px;
+    text-align: center;
+    background: #555;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+#contact {
+    background-color: #444;  /* Matching background color of other cards */
+    color: #fff;
+    padding: 50px 10%; /* Consistent padding for the card */
+    text-align: center;
+    border-radius: 8px;
+    border-top: 2px solid #f39c12; /* Border for consistency */
+    border-bottom: 2px solid #f39c12;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5); /* Matching shadow */
+    width: 80%; /* Ensure it matches other sections' width */
+    max-width: 1200px; /* Limit the max width for larger screens */
+    margin: 40px auto; /* Center the section on the page */
+}
+
+/* Ensure the main section container is consistent with padding */
+.section-container {
+    padding: 50px 10%;
+    background-color: #333;
+    margin-top: 40px; /* Offset for navbar */
+}
+
+/* For the contact links to match the rest of the design */
+.contact-links {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 30px; /* Add spacing between contact text and links */
+}
+
+.contact-link {
+    font-size: 1.5em;
+    color: #f39c12;
+    text-decoration: none;
+    background-color: #444;
+    padding: 15px 30px;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.contact-link:hover {
+    background-color: #f39c12;
+    color: #222;
+    transform: scale(1.1);
+}
+
+
+footer {
+    background: #000;
+    padding: 30px 10%;
+    text-align: center;
+    color: #fff;
+    border-top: 2px solid #f39c12;
+    position: relative;
+    margin-top: 50px;
+}
+
+footer p {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+footer .rights {
+    font-size: 1em;
+    margin-top: 5px;
+}
+
+.name {
+    font-size: 10px;
+    font-weight: bold;
+    text-align: right;
+    margin-left: 20px;
+}
+
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2.5em;
+    }
+
+    header h2 {
+        font-size: 1.5em;
+    }
+
+    nav a {
+        font-size: 1em;
+    }
+
+    .skills-list .skill-item, .platforms-list .platforms-item {
+        width: 100%;
+    }
+}
