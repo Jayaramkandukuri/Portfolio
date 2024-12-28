@@ -364,8 +364,21 @@ footer .rights {
         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
     }
 
+    #contact {
+        width: 90%;                /* Set the width of the contact card */
+        max-width: 100%;            /* Limit the max width */
+        padding: 20px;             /* Adjust padding inside the card */
+        margin: 20px auto;         /* Horizontally center the contact card */
+        background-color: #444;    /* Background color */
+        border-radius: 8px;        /* Rounded corners */
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5); /* Add shadow */
+        border-top: 2px solid #f39c12; /* Add top border */
+        border-bottom: 2px solid #f39c12; /* Add bottom border */
+        box-sizing: border-box;    /* Ensure padding doesn't affect width */
+    }
+
     .card h2 {
-        font-size: 2em;  /* Smaller card title for mobile */
+        font-size: 2.5em;  /* Adjust card title size for mobile */
         margin-bottom: 15px;
     }
 
@@ -376,6 +389,16 @@ footer .rights {
     .contact-link {
         font-size: 1.3em; /* Adjust size of contact links */
         padding: 12px 25px;
+        background-color: #444;  /* Set background color for contact links */
+        border-radius: 5px;      /* Rounded corners for links */
+        transition: background-color 0.3s, transform 0.3s; /* Smooth transition for hover effects */
+    }
+
+    /* Hover effect for contact links */
+    .contact-link:hover {
+        background-color: #f39c12; /* Change background on hover */
+        color: #222;                /* Darken text color on hover */
+        transform: scale(1.05);      /* Slightly enlarge on hover */
     }
 
     .contact-info p {
@@ -390,7 +413,7 @@ footer .rights {
         font-size: 0.9em;  /* Adjust rights font size */
     }
 
-    /* Ensuring proper spacing and alignment */
+    /* Ensuring proper spacing and alignment for items */
     .project-item, .education-item, .skill-item, .platforms-item {
         padding: 15px;
         margin-bottom: 10px;
@@ -404,5 +427,32 @@ footer .rights {
     .name {
         font-size: 9px;  /* Adjust name font size for smaller screens */
         margin-left: 0;
+    }
+
+    /* Mobile-specific hover adjustments */
+    .contact-link:hover,
+    .project-list a:hover,
+    .about-link:hover {
+        background-color: #f39c12;  /* Slightly change background on hover */
+        color: #222;                /* Darken text color */
+        transform: scale(1.05);      /* Slightly enlarge the element on hover */
+    }
+
+    /* Contact card hover effect */
+    #contact:hover {
+        box-shadow: 0 6px 8px rgba(0, 0, 0, 0.7);  /* Increase shadow on hover */
+        transform: translateY(-5px);  /* Slight upward movement */
+    }
+    
+    /* For social links in header */
+    header .social-links a:hover {
+        color: #f39c12; /* Change color on hover */
+        transform: scale(1.1); /* Slightly enlarge the icon on hover */
+    }
+
+    /* Ensure that header links are appropriately sized and have a subtle hover effect */
+    nav a:hover {
+        color: #f39c12;
+        transform: scale(1.05);  /* Subtle scaling effect */
     }
 }
