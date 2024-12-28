@@ -277,11 +277,11 @@ footer .rights {
     /* Mobile Header adjustments */
     header {
         display: flex;
+        flex-direction: column;
         justify-content: center; /* Center the content vertically */
         align-items: center;     /* Center the content horizontally */
         text-align: center;      /* Ensure text is centered */
-        padding-left: 0;         /* Remove left padding to center content */
-        padding-right: 0;        /* Remove right padding */
+        padding: 20px 10%;
     }
 
     header h1 {
