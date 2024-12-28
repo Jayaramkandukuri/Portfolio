@@ -26,7 +26,6 @@ header {
     filter: brightness(1.2); /* Increase brightness */
 }
 
-
 header h1 {
     font-size: 3.5em;
     margin: 0;
@@ -87,7 +86,7 @@ nav {
     padding: 15px 0;
     z-index: 1000;
     width: 100%;
-    justify-content:center;
+    justify-content: center;
 }
 
 nav a {
@@ -103,7 +102,6 @@ nav a:hover {
 }
 
 /* Add margin to the first section to avoid being hidden behind the navbar */
-/* Reduced spacing between header and section */
 .section-container {
     padding: 50px 10%;
     background-color: #333;
@@ -121,6 +119,8 @@ section {
     margin-bottom: 10%; /* 5% space between cards */
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+    overflow: hidden; /* Prevents text overflow */
+    word-wrap: break-word; /* Ensures text inside card breaks properly */
 }
 
 .card h2 {
@@ -137,6 +137,7 @@ section {
 .card li {
     font-size: 1.2em;
     line-height: 1.6;
+    word-wrap: break-word; /* Prevents text overflow */
 }
 
 .project-list, .education-list, .skills-list, .platforms-list {
@@ -146,6 +147,7 @@ section {
 
 .project-list li, .education-list li, .skills-list li, .platforms-list li {
     margin-bottom: 20px;
+    word-wrap: break-word; /* Ensures text wraps inside list items */
 }
 
 .project-list a, .about-link {
@@ -163,6 +165,7 @@ section {
     background: #555;
     border-radius: 8px;
     margin-bottom: 15px;
+    word-wrap: break-word; /* Ensures text breaks inside items */
 }
 
 .skills-list, .platforms-list {
@@ -170,6 +173,7 @@ section {
     flex-wrap: wrap;
     gap: 20px;
     justify-content: center;
+    word-wrap: break-word; /* Ensures text wraps inside the container */
 }
 
 .skills-list .skill-item, .platforms-list .platforms-item {
@@ -178,6 +182,7 @@ section {
     background: #555;
     padding: 20px;
     border-radius: 8px;
+    word-wrap: break-word; /* Ensures text wraps inside each item */
 }
 
 #contact {
@@ -225,7 +230,6 @@ section {
     transform: scale(1.1);
 }
 
-
 footer {
     background: #000;
     padding: 30px 10%;
@@ -268,5 +272,137 @@ footer .rights {
 
     .skills-list .skill-item, .platforms-list .platforms-item {
         width: 100%;
+    }
+
+    /* Mobile Header adjustments */
+    header {
+        display: flex;
+        justify-content: center; /* Center the content vertically */
+        align-items: center;     /* Center the content horizontally */
+        text-align: center;      /* Ensure text is centered */
+        padding-left: 0;         /* Remove left padding to center content */
+        padding-right: 0;        /* Remove right padding */
+    }
+
+    header h1 {
+        font-size: 2.5em;  /* Adjust font size for mobile */
+        text-align: center; /* Ensure header title text is centered */
+    }
+
+    header h2 {
+        font-size: 1.5em;  /* Adjust font size for mobile */
+        text-align: center; /* Ensure header subtitle text is centered */
+    }
+
+    .card {
+        margin: 0 auto;          /* Horizontally center the card */
+        padding: 20px;           /* Adjust padding inside the card */
+        max-width: 90%;          /* Limit card width */
+        box-sizing: border-box;  /* Ensure padding does not affect width */
+        background-color: #444;  /* Ensure the card color is set */
+        border-radius: 8px;      /* Round corners */
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5); /* Card shadow */
+    }
+
+    /* Center the social links and contact info on mobile */
+    header .social-links {
+        justify-content: center;  /* Center social links horizontally */
+        margin-top: 20px;
+    }
+
+    header .contact-info {
+        text-align: center; /* Center the contact info */
+    }
+    
+    /* Mobile Navigation Bar adjustments */
+    nav {
+        position: fixed;         /* Fixed positioning at the top */
+        top: 0;                  /* Align it at the top */
+        left: 50%;               /* Move it to the center */
+        transform: translateX(-50%); /* Adjust positioning to perfectly center */
+        display: flex;           /* Flexbox for horizontal layout */
+        justify-content: center; /* Center the items horizontally */
+        gap: 20px;
+        background-color: rgba(0, 0, 0, 0.8);
+        padding: 10px 0;
+        z-index: 1000;           /* Ensure it stays above other elements */
+        width: auto;             /* Allow the width to auto-adjust to content */
+
+    }
+
+    nav a {
+        font-size: 1em;
+    }
+
+    /* Mobile Card and Content adjustments */
+    .card {
+        padding: 20px;
+        margin-bottom: 20px; /* Ensure cards don't overlap */
+    }
+
+    .card p, .card li {
+        font-size: 1.1em; /* Slightly smaller font for mobile */
+        line-height: 1.4; /* Adjust line height for better readability */
+        word-wrap: break-word; /* Prevents text overflow */
+    }
+
+    .skills-list .skill-item, .platforms-list .platforms-item {
+        width: 100%;  /* Make skills and platforms items full-width on mobile */
+        text-align: center;
+        padding: 15px;
+    }
+
+    /* Project Cards Mobile Adjustments */
+    .project-card {
+        width: 90%;
+        max-width: 500px;  /* Ensuring cards don't stretch too wide */
+        margin: 20px auto; /* Center the card on mobile */
+        padding: 20px;
+        box-sizing: border-box;
+        background-color: #444;
+        border-radius: 8px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+    }
+
+    .card h2 {
+        font-size: 2em;  /* Smaller card title for mobile */
+        margin-bottom: 15px;
+    }
+
+    .contact-info, .contact-links {
+        text-align: center; /* Center align text in contact info */
+    }
+
+    .contact-link {
+        font-size: 1.3em; /* Adjust size of contact links */
+        padding: 12px 25px;
+    }
+
+    .contact-info p {
+        font-size: 1.1em;  /* Adjust font size for contact details */
+    }
+
+    footer p {
+        font-size: 1em;  /* Adjust font size for footer */
+    }
+
+    footer .rights {
+        font-size: 0.9em;  /* Adjust rights font size */
+    }
+
+    /* Ensuring proper spacing and alignment */
+    .project-item, .education-item, .skill-item, .platforms-item {
+        padding: 15px;
+        margin-bottom: 10px;
+        word-wrap: break-word; /* Prevent overflow */
+    }
+
+    .section-container {
+        padding: 30px 10%; /* Adjust padding for mobile */
+    }
+
+    .name {
+        font-size: 9px;  /* Adjust name font size for smaller screens */
+        margin-left: 0;
     }
 }
